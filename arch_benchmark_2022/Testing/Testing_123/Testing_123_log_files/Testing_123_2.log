@@ -1,0 +1,151 @@
+Thu, 21 Jul 2022 00:56:50 :: Information about Replication 2
+Thu, 21 Jul 2022 00:56:50 :: Running Testing_123 Replication 2 with seed 125
+Thu, 21 Jul 2022 00:56:50 :: **************************************************
+Thu, 21 Jul 2022 00:56:50 :: Options File:
+Thu, 21 Jul 2022 00:56:50 :: BENCHMARK_NAME : Testing_123
+Thu, 21 Jul 2022 00:56:50 :: init_reg_sup : [[0. 1.]]
+Thu, 21 Jul 2022 00:56:50 :: tf_dim : 1
+Thu, 21 Jul 2022 00:56:50 :: max_budget : 500
+Thu, 21 Jul 2022 00:56:50 :: init_budget : 10
+Thu, 21 Jul 2022 00:56:50 :: bo_budget : 10
+Thu, 21 Jul 2022 00:56:50 :: cs_budget : 10
+Thu, 21 Jul 2022 00:56:50 :: init_sampling_type : lhs_sampling
+Thu, 21 Jul 2022 00:56:50 :: cs_sampling_type : lhs_sampling
+Thu, 21 Jul 2022 00:56:50 :: q_estim_sampling : lhs_sampling
+Thu, 21 Jul 2022 00:56:50 :: mc_integral_sampling_type : lhs_sampling
+Thu, 21 Jul 2022 00:56:50 :: results_sampling_type : lhs_sampling
+Thu, 21 Jul 2022 00:56:50 :: alpha : 0.05
+Thu, 21 Jul 2022 00:56:50 :: R : 10
+Thu, 21 Jul 2022 00:56:50 :: M : 100
+Thu, 21 Jul 2022 00:56:50 :: delta : 0.001
+Thu, 21 Jul 2022 00:56:50 :: fv_quantiles_for_gp : [0.01, 0.05, 0.5]
+Thu, 21 Jul 2022 00:56:50 :: min_volume : 0.001
+Thu, 21 Jul 2022 00:56:50 :: branching_factor : 2
+Thu, 21 Jul 2022 00:56:50 :: uniform_partitioning : True
+Thu, 21 Jul 2022 00:56:50 :: start_seed : 123
+Thu, 21 Jul 2022 00:56:50 :: gpr_model : <partxv2.gprInterface.internalGPR.InternalGPR object at 0x7f93b1282940>
+Thu, 21 Jul 2022 00:56:50 :: bo_model : <partxv2.bayesianOptimization.internalBO.InternalBO object at 0x7f93b1282ac0>
+Thu, 21 Jul 2022 00:56:50 :: **************************************************
+Thu, 21 Jul 2022 00:56:50 :: Budget Used = 0
+Thu, 21 Jul 2022 00:56:50 :: Budget Available (Max Budget) = 500
+Thu, 21 Jul 2022 00:56:50 :: **************************************************
+Thu, 21 Jul 2022 00:56:50 :: **************************************************
+Thu, 21 Jul 2022 00:56:50 :: ***************Replication Start******************
+Thu, 21 Jul 2022 00:56:50 :: **************************************************
+Thu, 21 Jul 2022 00:56:50 :: Remaining Regions: [0]
+Thu, 21 Jul 2022 00:56:50 :: Classified Regions: []
+Thu, 21 Jul 2022 00:56:50 :: Unidentified Regions: []
+Thu, 21 Jul 2022 00:56:50 :: 0 Evaluations completed
+Thu, 21 Jul 2022 00:56:50 :: 500 left
+Thu, 21 Jul 2022 00:56:50 :: **************************************************
+Thu, 21 Jul 2022 00:57:11 :: **************************************************
+Thu, 21 Jul 2022 00:57:11 :: Remaining Regions: [2, 1]
+Thu, 21 Jul 2022 00:57:11 :: Classified Regions: []
+Thu, 21 Jul 2022 00:57:11 :: Unidentified Regions: []
+Thu, 21 Jul 2022 00:57:11 :: 40 Evaluations completed
+Thu, 21 Jul 2022 00:57:11 :: 460 left
+Thu, 21 Jul 2022 00:57:11 :: **************************************************
+Thu, 21 Jul 2022 00:57:54 :: **************************************************
+Thu, 21 Jul 2022 00:57:54 :: Remaining Regions: [6, 5, 4, 3]
+Thu, 21 Jul 2022 00:57:54 :: Classified Regions: []
+Thu, 21 Jul 2022 00:57:54 :: Unidentified Regions: []
+Thu, 21 Jul 2022 00:57:54 :: 90 Evaluations completed
+Thu, 21 Jul 2022 00:57:54 :: 410 left
+Thu, 21 Jul 2022 00:57:54 :: **************************************************
+Thu, 21 Jul 2022 00:59:32 :: **************************************************
+Thu, 21 Jul 2022 00:59:32 :: Remaining Regions: [14, 13, 11, 10, 8, 7]
+Thu, 21 Jul 2022 00:59:32 :: Classified Regions: []
+Thu, 21 Jul 2022 00:59:32 :: Unidentified Regions: []
+Thu, 21 Jul 2022 00:59:32 :: 197 Evaluations completed
+Thu, 21 Jul 2022 00:59:32 :: 303 left
+Thu, 21 Jul 2022 00:59:32 :: **************************************************
+Thu, 21 Jul 2022 01:01:57 :: **************************************************
+Thu, 21 Jul 2022 01:01:57 :: Remaining Regions: [26, 24, 21, 20, 17, 16]
+Thu, 21 Jul 2022 01:01:57 :: Classified Regions: [25, 22, 19]
+Thu, 21 Jul 2022 01:01:57 :: Unidentified Regions: []
+Thu, 21 Jul 2022 01:01:57 :: 350 Evaluations completed
+Thu, 21 Jul 2022 01:01:57 :: 150 left
+Thu, 21 Jul 2022 01:01:57 :: **************************************************
+Thu, 21 Jul 2022 01:01:57 :: **************************************************
+Thu, 21 Jul 2022 01:01:57 :: Entering Last Phase with 150 left
+Thu, 21 Jul 2022 01:01:57 :: Remaining Regions: [26, 24, 21, 20, 17, 16]
+Thu, 21 Jul 2022 01:01:57 :: Classified Regions: [25, 22, 19]
+Thu, 21 Jul 2022 01:01:57 :: Unidentified Regions: []
+Thu, 21 Jul 2022 01:01:57 :: **************************************************
+Thu, 21 Jul 2022 01:02:25 :: **************************************************
+Thu, 21 Jul 2022 01:02:25 :: Remaining Regions: [26, 24, 21, 20, 17, 16]
+Thu, 21 Jul 2022 01:02:25 :: Classified Regions: [25, 22, 19]
+Thu, 21 Jul 2022 01:02:25 :: Unidentified Regions: []
+Thu, 21 Jul 2022 01:02:25 :: 500 Evaluations completed
+Thu, 21 Jul 2022 01:02:25 :: 0 left
+Thu, 21 Jul 2022 01:02:25 :: **************************************************
+Thu, 21 Jul 2022 01:02:25 :: **************************************************
+Thu, 21 Jul 2022 01:02:25 :: *********Replication 2 Finished*****************
+Thu, 21 Jul 2022 01:02:25 :: Remaining Regions: [26, 24, 21, 20, 17, 16]
+Thu, 21 Jul 2022 01:02:25 :: Classified Regions: [25, 22, 19]
+Thu, 21 Jul 2022 01:02:25 :: Unidentified Regions: []
+Thu, 21 Jul 2022 01:02:25 :: 500 Evaluations completed
+Thu, 21 Jul 2022 01:02:25 :: 0 left
+Thu, 21 Jul 2022 01:02:25 :: **************************************************
+Thu, 21 Jul 2022 01:02:33 :: Ended Testing_123 Replication 2 with seed 125
+Thu, 21 Jul 2022 01:23:10 :: Information about Replication 2
+Thu, 21 Jul 2022 01:23:10 :: Running Testing_123 Replication 2 with seed 125
+Thu, 21 Jul 2022 01:23:10 :: **************************************************
+Thu, 21 Jul 2022 01:23:10 :: Options File:
+Thu, 21 Jul 2022 01:23:10 :: BENCHMARK_NAME : Testing_123
+Thu, 21 Jul 2022 01:23:10 :: init_reg_sup : [[0. 1.]]
+Thu, 21 Jul 2022 01:23:10 :: tf_dim : 1
+Thu, 21 Jul 2022 01:23:10 :: max_budget : 500
+Thu, 21 Jul 2022 01:23:10 :: init_budget : 10
+Thu, 21 Jul 2022 01:23:10 :: bo_budget : 10
+Thu, 21 Jul 2022 01:23:10 :: cs_budget : 10
+Thu, 21 Jul 2022 01:23:10 :: init_sampling_type : lhs_sampling
+Thu, 21 Jul 2022 01:23:10 :: cs_sampling_type : lhs_sampling
+Thu, 21 Jul 2022 01:23:10 :: q_estim_sampling : lhs_sampling
+Thu, 21 Jul 2022 01:23:10 :: mc_integral_sampling_type : lhs_sampling
+Thu, 21 Jul 2022 01:23:10 :: results_sampling_type : lhs_sampling
+Thu, 21 Jul 2022 01:23:10 :: alpha : 0.05
+Thu, 21 Jul 2022 01:23:10 :: R : 10
+Thu, 21 Jul 2022 01:23:10 :: M : 100
+Thu, 21 Jul 2022 01:23:10 :: delta : 0.001
+Thu, 21 Jul 2022 01:23:10 :: fv_quantiles_for_gp : [0.01, 0.05, 0.5]
+Thu, 21 Jul 2022 01:23:10 :: min_volume : 0.001
+Thu, 21 Jul 2022 01:23:10 :: branching_factor : 2
+Thu, 21 Jul 2022 01:23:10 :: uniform_partitioning : True
+Thu, 21 Jul 2022 01:23:10 :: start_seed : 123
+Thu, 21 Jul 2022 01:23:10 :: gpr_model : <partxv2.gprInterface.internalGPR.InternalGPR object at 0x7f0304d4d8e0>
+Thu, 21 Jul 2022 01:23:10 :: bo_model : <partxv2.bayesianOptimization.internalBO.InternalBO object at 0x7f0304d4da60>
+Thu, 21 Jul 2022 01:23:10 :: **************************************************
+Thu, 21 Jul 2022 01:23:10 :: Budget Used = 0
+Thu, 21 Jul 2022 01:23:10 :: Budget Available (Max Budget) = 500
+Thu, 21 Jul 2022 01:23:10 :: **************************************************
+Thu, 21 Jul 2022 01:23:10 :: **************************************************
+Thu, 21 Jul 2022 01:23:10 :: ***************Replication Start******************
+Thu, 21 Jul 2022 01:23:10 :: **************************************************
+Thu, 21 Jul 2022 01:23:10 :: Remaining Regions: [0]
+Thu, 21 Jul 2022 01:23:10 :: Classified Regions: []
+Thu, 21 Jul 2022 01:23:10 :: Unidentified Regions: []
+Thu, 21 Jul 2022 01:23:10 :: 0 Evaluations completed
+Thu, 21 Jul 2022 01:23:10 :: 500 left
+Thu, 21 Jul 2022 01:23:10 :: **************************************************
+Thu, 21 Jul 2022 01:23:31 :: **************************************************
+Thu, 21 Jul 2022 01:23:31 :: Remaining Regions: [2, 1]
+Thu, 21 Jul 2022 01:23:31 :: Classified Regions: []
+Thu, 21 Jul 2022 01:23:31 :: Unidentified Regions: []
+Thu, 21 Jul 2022 01:23:31 :: 40 Evaluations completed
+Thu, 21 Jul 2022 01:23:31 :: 460 left
+Thu, 21 Jul 2022 01:23:31 :: **************************************************
+Thu, 21 Jul 2022 01:24:13 :: **************************************************
+Thu, 21 Jul 2022 01:24:13 :: Remaining Regions: [6, 5, 4, 3]
+Thu, 21 Jul 2022 01:24:13 :: Classified Regions: []
+Thu, 21 Jul 2022 01:24:13 :: Unidentified Regions: []
+Thu, 21 Jul 2022 01:24:13 :: 90 Evaluations completed
+Thu, 21 Jul 2022 01:24:13 :: 410 left
+Thu, 21 Jul 2022 01:24:13 :: **************************************************
+Thu, 21 Jul 2022 01:25:51 :: **************************************************
+Thu, 21 Jul 2022 01:25:51 :: Remaining Regions: [14, 13, 11, 10, 8, 7]
+Thu, 21 Jul 2022 01:25:51 :: Classified Regions: []
+Thu, 21 Jul 2022 01:25:51 :: Unidentified Regions: []
+Thu, 21 Jul 2022 01:25:51 :: 197 Evaluations completed
+Thu, 21 Jul 2022 01:25:51 :: 303 left
+Thu, 21 Jul 2022 01:25:51 :: **************************************************
