@@ -52,13 +52,9 @@ class BOSampling:
             raise TypeError(f"x_train, y_train set mismatch. x_train has shape {x_train.shape} and y_train has shape {y_train.shape}")
 
         
-        x_complete, y_complete, x_new, y_new = self.bo_model.sample(
+        falsified = self.bo_model.sample(
             test_function, num_samples, x_train, y_train, region_support, gpr_model, rng
         )
 
-        assert len(x_new.shape) == 2, f"Returned samples set: Expected (n, dim) array, returned {x_train.shape} instead."
-        assert len(y_new.shape) == 1, f"Returned evaluations set input: Expected (n, ) array, returned {y_new.shape} instead."
-        assert len(x_complete.shape) == 2, f"Returned merged samples set input: Expected (n, dim) array, returned {x_complete.shape} instead."
-        assert len(y_complete.shape) == 1, f"Returned merged evaluations set input: Expected (n, ) array, returned {y_complete.shape} instead."
 
-        return x_complete, y_complete, x_new, y_new
+        return falsified

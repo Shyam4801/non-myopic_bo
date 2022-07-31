@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "BayesianOptimization"
-version = "0.1.0"
+name = "bo"
+version = "0.1.1"
 description = ""
 authors = ["daittan <tanmay.khandait@gmail.com>"]
 

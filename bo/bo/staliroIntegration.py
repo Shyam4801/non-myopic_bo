@@ -45,7 +45,6 @@ class BO(Optimizer[BOResult]):
             init_budget=self.init_budget,
             max_budget=budget,
             region_support=region_support,
-            gpr_model=self.gpr_model,
             seed = seed,
             folder_name=self.folder_name,
             init_sampling_type=self.init_sampling_type

@@ -3,6 +3,7 @@ from typing import Callable, Tuple
 from numpy.typing import NDArray
 import numpy as np
 import pathlib
+from tqdm import tqdm
 
 from .gprInterface import GPR
 from .bayesianOptimization import BOSampling
@@ -54,8 +55,10 @@ class PerformBO:
             self.init_sampling_type = init_sampling_type
 
             base_path = pathlib.Path()
-            self.folder_directory = base_path.joinpath(folder_name)
-            self.folder_directory.mkdir(exist_ok=True)
+            folder_directory = base_path.joinpath(folder_name)
+            folder_directory.mkdir(exist_ok=True)
+            self.benchmark_directory = folder_directory.joinpath(benchmark_name)
+            self.benchmark_directory.mkdir(exist_ok=True)
             
 
     def __call__(self, bo_model, gpr_model):
@@ -73,10 +76,10 @@ class PerformBO:
         y_train, falsified = compute_robustness(x_train, self.tf_wrapper)
 
         if not falsified:
-            
-            falsified = bo_routine.sample(self.tf_wrapper, self.max_budget - self.init_budget, x_train, y_train, self.region_support, gpr_model)
+            print("No falsification in Initial Samples. Performing BO now")
+            falsified = bo_routine.sample(self.tf_wrapper, self.max_budget - self.init_budget, x_train, y_train, self.region_support, gpr_model, self.rng)
 
-        with open(self.folder_directory.joinpath(f"{self.benchmark_name_}_seed_{self.seed}.pkl"), "wb") as f:
+        with open(self.benchmark_directory.joinpath(f"{self.benchmark_name}_seed_{self.seed}.pkl"), "wb") as f:
             pickle.dump((self.tf_wrapper.point_history, self.tf_wrapper.count), f)
 
         return (self.tf_wrapper.point_history, self.tf_wrapper.count)

@@ -3,6 +3,7 @@ import numpy as np
 from numpy.typing import NDArray
 from scipy.optimize import minimize
 from scipy.stats import norm
+from tqdm import tqdm
 
 from .bointerface import BO_Interface
 from ..gprInterface import GPR
@@ -49,7 +50,7 @@ class InternalBO(BO_Interface):
             y_new
         """
         falsified = False
-        for sample in range(num_samples):
+        for sample in tqdm(range(num_samples)):
             model = GPR(gpr_model)
             model.fit(x_train, y_train)
 
