@@ -33,7 +33,7 @@ class Benchmark_AT1(Benchmark):
             init_sampling_type = "lhs_sampling"
         )
 
-        self.options = Options(runs=self.NUMBER_OF_MACRO_REPLICATIONS, iterations=self.MAX_BUDGET, interval=(0, 50), seed = 12345, signals=self.signals)
+        self.options = Options(runs=self.NUMBER_OF_MACRO_REPLICATIONS, iterations=self.MAX_BUDGET, interval=(0, 50), seed = 12346, signals=self.signals)
 
     def run(self):
         result = staliro(self.model, self.specification, self.optimizer, self.options)

@@ -21,10 +21,11 @@ def compute_robustness(samples_in: npt.NDArray, test_function: Type[Fn]) -> npt.
     else:
         samples_out = []
         for sample in samples_in:
-            rob = test_function(samples_in[0])
+            rob = test_function(sample)
             samples_out.append(rob)
             if rob < 0:
                 falsified = True
+                break
         samples_out = np.array(samples_out)
 
     return samples_out, falsified

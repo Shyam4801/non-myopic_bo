@@ -21,7 +21,7 @@ class Benchmark_AT2(Benchmark):
         print(self.specification)
         print(self.signals)
         self.MAX_BUDGET = 2000
-        self.NUMBER_OF_MACRO_REPLICATIONS = 10
+        self.NUMBER_OF_MACRO_REPLICATIONS = 1
         self.model = AutotransModel()
         
         self.optimizer = BO(
