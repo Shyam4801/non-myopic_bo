@@ -27,7 +27,7 @@ def _get_benchmark(name, results_folder):
 if __name__ == "__main__":
     parser = ArgumentParser(description="Run arch benchmarks")
     parser.add_argument("benchmark_names", nargs="*", help="Name of benchmarks to run")
-    parser.add_argument("-f", "--folder", default = "ARCHCOMP2022_PartX_Instance2")
+    parser.add_argument("-f", "--folder", default = "ARCHCOMP2022_PartX_I2")
     parser.add_argument("-a", "--all", help="Run all benchmarks", action="store_true")
     parser.add_argument("-l", "--list", help="List all benchmarks", action="store_true")
     args = parser.parse_args()
