@@ -79,7 +79,7 @@ class PerformBO:
             raise ValueError(f"{self.init_sampling_type} not defined. Currently only Latin Hypercube Sampling and Uniform Sampling is supported.")
 
         y_train, falsified = compute_robustness(x_train, self.tf_wrapper, self.behavior)
-
+        
         if not falsified:
             print("No falsification in Initial Samples. Performing BO now")
             falsified = bo_routine.sample(self.tf_wrapper, self.max_budget - self.init_budget, x_train, y_train, self.region_support, gpr_model, self.rng)

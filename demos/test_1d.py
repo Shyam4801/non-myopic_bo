@@ -1,11 +1,13 @@
 import numpy as np
 from bo import Behavior, PerformBO
 from bo.bayesianOptimization import InternalBO
+from bo.bayesianOptimization import Rollout_BO
 from bo.gprInterface import InternalGPR
 from bo.interface import BOResult
 
 
 def internal_function(X):
+            # print('internal func :', X,X.shape)
             return X[0] ** 2 + X[1] ** 2 -1
 
 init_reg_sup = np.array([[-1, 1], [-2, 2]])
@@ -20,7 +22,7 @@ optimizer = PerformBO(
     init_sampling_type="lhs_sampling"
 )
 
-z = optimizer(bo_model=InternalBO(), gpr_model=InternalGPR())
+z = optimizer(bo_model=Rollout_BO(), gpr_model=InternalGPR())
 history = z.history
 time = z.optimization_time
 

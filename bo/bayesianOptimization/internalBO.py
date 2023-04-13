@@ -58,12 +58,13 @@ class InternalBO(BO_Interface):
             pred_sample_x = self._opt_acquisition(y_train, model, region_support, rng)
             
             pred_sample_y, falsified = compute_robustness(np.array([pred_sample_x]), test_function, behavior)
+            
             x_train = np.vstack((x_train, np.array([pred_sample_x])))
             y_train = np.hstack((y_train, pred_sample_y))
 
             if falsified:
                 break
-
+            
         return falsified
 
         
@@ -97,13 +98,15 @@ class InternalBO(BO_Interface):
         fun = lambda x_: -1 * self._acquisition(y_train, x_, gpr_model)
 
         random_samples = uniform_sampling(2000, region_support, tf_dim, rng)
+        # print('random :', random_samples.shape)
         min_bo_val = -1 * self._acquisition(
             y_train, random_samples, gpr_model, "multiple"
         )
 
-        min_bo = np.array(random_samples[np.argmin(min_bo_val), :])
-        # print(min_bo)
-        min_bo_val = np.min(min_bo_val)
+        min_bo = np.array(random_samples[np.argmin(min_bo_val), :])  # x val of min EI
+        # print('min bo: ',min_bo)
+        min_bo_val = np.min(min_bo_val)  #min EI val
+        # print(min_bo_val)
         # print(list(zip(lower_bound_theta, upper_bound_theta)))
         for _ in range(9):
             new_params = minimize(
@@ -118,11 +121,12 @@ class InternalBO(BO_Interface):
             if min_bo is None or fun(new_params.x) < min_bo_val:
                 min_bo = new_params.x
                 min_bo_val = fun(min_bo)
+            # print('inside loop 9 : ',min_bo,min_bo_val)
         new_params = minimize(
             fun, bounds=list(zip(lower_bound_theta, upper_bound_theta)), x0=min_bo
         )
         min_bo = new_params.x
-
+        # print('min bo: ',min_bo)
         return np.array(min_bo)
 
     def _surrogate(self, gpr_model: Callable, x_train: NDArray):
