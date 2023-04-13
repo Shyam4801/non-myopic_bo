@@ -22,7 +22,7 @@ optimizer = PerformBO(
     init_sampling_type="lhs_sampling"
 )
 
-z = optimizer(bo_model=Rollout_BO(), gpr_model=InternalGPR())
+z = optimizer(bo_model=Rollout_BO(horizon=2), gpr_model=InternalGPR())
 history = z.history
 time = z.optimization_time
 

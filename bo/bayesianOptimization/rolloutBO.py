@@ -17,9 +17,10 @@ from .rolloutEI import RolloutEI
 
 
 class Rollout_BO():
-    def __init__(self):
+    def __init__(self,horizon):
         super().__init__()
-        pass
+        self.horizon = horizon
+        
 
     def sample(
         self,
@@ -55,22 +56,14 @@ class Rollout_BO():
             x_new
             y_new
         """
-        self.tf = test_function
-        self.region_support = region_support
-        self.rng = rng
         falsified = False
-        self.behavior = behavior
-
-            # outer BO with EI 
+        # generate max budget - init samples
         for sample in tqdm(range(num_samples)):
             model = GPR(gpr_model)
-            # print('rolloutBO:     ',dir(model))
             model.fit(x_train, y_train)
-
-            # pred_sample_x = self._opt_acquisition(y_train, model, region_support, rng)  # EI for the outer BO 
+            # Sample the next point by rollout for h horizons
             ei_roll = RolloutEI()
-            pred_sample_x = ei_roll.sample(test_function,2,y_train,region_support,model,rng,behavior)
-            #  = self.get_exp_values(model, 2, np.array([pred_sample_x]))    # this uses the inner MC to rollout EI and get the accumulated the reward or yt+1
+            pred_sample_x = ei_roll.sample(test_function,self.horizon,y_train,region_support,model,rng)
             pred_sample_y, falsified = compute_robustness(pred_sample_x, test_function, behavior)
             print('############################################################################')
             print()
@@ -82,8 +75,6 @@ class Rollout_BO():
 
             if falsified:
                 break
-            # print(model.predict(x_train))
-        print('Inside rollout sample')
         return falsified
     
     
