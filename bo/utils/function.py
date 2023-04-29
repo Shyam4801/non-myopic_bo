@@ -6,6 +6,7 @@ class Fn:
         self.count = 0
         self.point_history = []
         self.simultation_time = []
+        
 
     def __call__(self, *args, **kwargs):
         self.count = self.count + 1
@@ -15,3 +16,5 @@ class Fn:
         self.simultation_time.append(time_elapsed)
         self.point_history.append([self.count, *args, rob_val])
         return rob_val
+    
+    
