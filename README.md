@@ -4,9 +4,11 @@ Bayesian Optimization is among a class of sample efficient global optimization a
 
 ## Results
 Results of rolling out for 8 horizons against one step EI
-![My Image](results/without_rl_modb.png "One step EI")
-![My Image](results/8hmodb.png "EI rolled out for 8 horizons")
 
+<p float="left">
+  <img src="results/without_rl_modb.png" width="250" />
+  <img src="results/8hmodb.png" width="250" />
+</p>
 
 ## Installation
 
