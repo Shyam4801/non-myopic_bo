@@ -65,15 +65,15 @@ init_reg_sup = np.array([[-5, 10], [0, 15]]) # branin
 print('time: ',int(time.time()))
 optimizer = PerformBO(
     test_function=internal_function,
-    init_budget=5,  #10
-    max_budget=10,  #15
+    init_budget=2,  #10
+    max_budget=12,  #15
     region_support=init_reg_sup,
     seed=int(time.time()),
     behavior=Behavior.MINIMIZATION,
     init_sampling_type="lhs_sampling"
 )
 
-z = optimizer(bo_model=Rollout_BO(8), gpr_model=InternalGPR())
+z = optimizer(bo_model=Rollout_BO(2), gpr_model=InternalGPR())
 history = z.history
 time = z.optimization_time
 

@@ -74,7 +74,7 @@ class PerformBO:
         
         
         if self.init_sampling_type == "lhs_sampling":
-            x_train = np.array([[-1.425914942388530,7.7740223781336100],[2.897079800559	,10.561556213666200],[7.325439816266640,	1.3057551677419700],[4.859328387159200	,13.26614441528690],[-3.0007302930792900,	5.277732413490960]]) #lhs_sampling(self.init_budget, self.region_support, tf_dim, self.rng)
+            x_train = lhs_sampling(self.init_budget, self.region_support, tf_dim, self.rng) #np.array([[-1.425914942388530,7.7740223781336100],[2.897079800559	,10.561556213666200],[7.325439816266640,	1.3057551677419700],[4.859328387159200	,13.26614441528690],[-3.0007302930792900,	5.277732413490960]]) #
         elif self.init_sampling_type == "uniform_sampling":
             x_train = uniform_sampling(self.init_budget, self.region_support, tf_dim, self.rng)
         else:
@@ -94,6 +94,7 @@ class PerformBO:
         xcoord.to_csv(str(H)+'_'+NAME+'_'+str(self.init_budget)+'_'+str(self.max_budget - self.init_budget)+'.csv')
         xcoord = xcoord.to_numpy()
         print(xcoord)
+        print(min(xcoord[:,2]))
         # plot_1d(xcoord,self.tf,0.25,0.07,0.8,self.init_budget,self.max_budget - self.init_budget)
-        plot_obj(xcoord,self.tf,[9.42, 2.475],[-5,10],[0,15],self.init_budget,self.max_budget - self.init_budget)
+        # plot_obj(xcoord,self.tf,[9.42, 2.475],[-5,10],[0,15],self.init_budget,self.max_budget - self.init_budget)
         return BOResult(self.tf_wrapper.point_history, time.perf_counter()-start_time)
